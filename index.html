@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sky Way - Elevating the Horizon Perspective</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#d5e3ff",
+                        "secondary-fixed": "#a2eeff",
+                        "surface-tint": "#485f84",
+                        "inverse-primary": "#b0c7f1",
+                        "secondary": "#006877",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#183153",
+                        "surface-bright": "#f9f9ff",
+                        "primary-fixed-dim": "#b0c7f1",
+                        "tertiary": "#002234",
+                        "surface-variant": "#d5e3ff",
+                        "secondary-container": "#7fe9ff",
+                        "outline": "#74777f",
+                        "on-surface-variant": "#44474e",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9ff",
+                        "surface-container-low": "#f0f3ff",
+                        "on-secondary-fixed-variant": "#004e5a",
+                        "on-tertiary-container": "#6fa4c7",
+                        "on-surface": "#001b3c",
+                        "surface": "#f9f9ff",
+                        "on-background": "#001b3c",
+                        "on-secondary-container": "#006977",
+                        "surface-container-highest": "#d5e3ff",
+                        "on-tertiary-fixed-variant": "#064c6b",
+                        "surface-dim": "#c8dbff",
+                        "secondary-fixed-dim": "#69d5ea",
+                        "on-secondary-fixed": "#001f25",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#dee8ff",
+                        "tertiary-fixed-dim": "#98cdf2",
+                        "tertiary-fixed": "#c7e7ff",
+                        "on-tertiary-fixed": "#001e2e",
+                        "on-primary-container": "#879ec6",
+                        "outline-variant": "#c4c6cf",
+                        "on-primary-fixed": "#001b3c",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#ecf1ff",
+                        "primary": "#031f41",
+                        "surface-container": "#e7eeff",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#003953",
+                        "primary-container": "#1d3557",
+                        "on-primary-fixed-variant": "#30476a",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-background text-on-background font-body antialiased selection:bg-secondary selection:text-on-secondary relative">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-lg shadow-sm dark:shadow-none transition-all duration-300">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
+<div class="flex items-center gap-2">
+<img src="assets/sky-way.png" alt="Sky Way Logo" class="h-14 sm:h-16 md:h-20 w-auto object-contain" />
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#006877] font-bold border-b-2 border-[#006877] pb-1 font-label text-sm tracking-wide" href="#home">Home</a>
+<a class="text-[#1D3557] hover:text-[#006877] transition-colors font-label text-sm tracking-wide" href="#about">About</a>
+<a class="text-[#1D3557] hover:text-[#006877] transition-colors font-label text-sm tracking-wide" href="#hotels">Hotels</a>
+<a class="text-[#1D3557] hover:text-[#006877] transition-colors font-label text-sm tracking-wide" href="#camps">Camps</a>
+<a class="text-[#1D3557] hover:text-[#006877] transition-colors font-label text-sm tracking-wide" href="#journeys">Journeys</a>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<a href="#contact" class="px-6 py-2.5 rounded-lg bg-gradient-to-r from-primary to-primary-container text-on-primary font-label font-medium shadow-[0_8px_30px_rgb(3,31,65,0.12)] hover:shadow-[0_8px_30px_rgb(3,31,65,0.2)] transition-all duration-300 scale-95 active:scale-100">Contact Us</a>
+</div>
+<button id="mobile-menu-btn" class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+<!-- Mobile Menu Container -->
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white/95 dark:bg-slate-950/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 shadow-lg">
+<div class="flex flex-col px-8 py-6 gap-4">
+<a class="text-[#1D3557] hover:text-[#006877] transition-colors font-label font-medium text-lg" href="#home">Home</a>
+<a class="text-[#1D3557] hover:text-[#006877] transition-colors font-label font-medium text-lg" href="#about">About</a>
+<a class="text-[#1D3557] hover:text-[#006877] transition-colors font-label font-medium text-lg" href="#hotels">Hotels</a>
+<a class="text-[#1D3557] hover:text-[#006877] transition-colors font-label font-medium text-lg" href="#camps">Camps</a>
+<a class="text-[#1D3557] hover:text-[#006877] transition-colors font-label font-medium text-lg" href="#journeys">Journeys</a>
+<hr class="border-slate-200 dark:border-slate-800 my-2" />
+<a href="#contact" class="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-primary to-primary-container text-on-primary font-label font-medium shadow-md hover:shadow-lg transition-all text-center text-lg block">Contact Us</a>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-surface-container-low" id="home">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Image" class="w-full h-full object-cover object-center" data-alt="Breathtaking luxury resort nestled in a lush tropical hillside overlooking a serene azure ocean bay at golden hour" src="assets/hero.png"/>
+<div class="absolute inset-0 bg-[#031F41]/40 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-background/90"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full flex flex-col items-center text-center mt-12 reveal">
+<h1 class="font-headline text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tighter mb-6 leading-tight drop-shadow-2xl">
+Unveil the Magic of Dahab
+</h1>
+<p class="font-body text-lg md:text-xl text-white/90 max-w-2xl font-light leading-relaxed mb-10 drop-shadow-md">
+Escape the ordinary. Join Sky Way for exclusive journeys where golden sands meet crystal waters, crafting memories that last a lifetime.
+</p>
+<div class="flex items-center gap-6 mt-2">
+<a href="https://wa.me/+201020393311" target="_blank" rel="noopener noreferrer" class="hero-social-icon w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:bg-[#006877] hover:border-[#006877] transition-all duration-300">
+<i class="fab fa-whatsapp text-xl"></i>
+</a>
+<a href="https://www.instagram.com/skyway_travel_?igsh=MXI1aHd5bHc5d3dodA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hero-social-icon w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:bg-[#006877] hover:border-[#006877] transition-all duration-300">
+<i class="fab fa-instagram text-xl"></i>
+</a>
+<a href="https://www.facebook.com/share/1Gjs4fRuPe/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="hero-social-icon w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:bg-[#006877] hover:border-[#006877] transition-all duration-300">
+<i class="fab fa-facebook-f text-xl"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- About Us -->
+<section class="py-32 px-8 bg-surface relative overflow-hidden" id="about">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-surface-container-low -z-10 rounded-l-[100px] opacity-50"></div>
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative z-10 order-2 lg:order-1 reveal">
+<div class="absolute -top-8 -left-8 w-64 h-64 bg-surface-container-highest rounded-full blur-3xl opacity-30 -z-10"></div>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-primary tracking-tight mb-6">Redefining the Dahab Experience</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-6 font-light">
+At Sky Way, we believe a journey is more than just reaching a destination; it's a profound shift in perspective. Established in 2024, we were founded on a singular vision: to strip away the mundane and reveal the untamed, extraordinary soul of Sinai.
+</p>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-10 font-light">
+Our curated Dahab experiences represent the perfect intersection of ultimate comfort and authentic local culture. We don't just organize trips; we orchestrate immersive journeys where the majestic Red Sea meets rugged mountains, and where every moment is meticulously architected to become a lifelong memory.
+</p>
+</div>
+<div class="relative order-1 lg:order-2 reveal delay-100">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-[0_20px_60px_rgba(3,31,65,0.15)] relative">
+<img alt="Luxury Resort" class="w-full h-full object-cover" data-alt="elegant woman standing on a wooden deck overlooking a serene infinity pool blending into the ocean at a luxury minimalist resort" src="assets/about.jpeg"/>
+</div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary-container/20 rounded-full blur-2xl -z-10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Hotels -->
+<section class="py-32 px-8 bg-surface-container-low" id="hotels">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-20 reveal">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-primary tracking-tight mb-6">Curated Sanctuaries</h2>
+<p class="font-body text-on-surface-variant text-lg font-light leading-relaxed">
+Experience the pinnacle of coastal luxury. We handpick boutique hotels and premium stays that blend seamless modern design with the serene, laid-back essence of Dahab. Your perfect retreat after a day of discovery.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+<!-- Zain Hotel -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-100">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Zain Hotel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/hotels/zain_hotel/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Zain Hotel</h3>
+<a href="https://maps.app.goo.gl/pYdiocGdQ913buPw9?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> First-row sea view, Blue Hole Road</li>
+<li><i class="fas fa-check"></i> Pool & sea view rooms with A/C, LCD TVs, mini-bars</li>
+<li><i class="fas fa-check"></i> Sea view restaurant</li>
+<li><i class="fas fa-check"></i> B&B included</li>
+<li><i class="fas fa-check"></i> Roman-style theater & swimming pools</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Zain Hotel"
+data-images='["assets/hotels/zain_hotel/1.jpeg","assets/hotels/zain_hotel/2.jpeg","assets/hotels/zain_hotel/3.jpeg","assets/hotels/zain_hotel/4.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+<!-- Canyon Hotel -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-200">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Canyon Hotel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/hotels/canyon_hotel/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Canyon Hotel</h3>
+<a href="https://maps.app.goo.gl/W6UBgkR3AmAiy54v8?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> First-row sea view, private sandy beach</li>
+<li><i class="fas fa-check"></i> Beachfront seating areas</li>
+<li><i class="fas fa-check"></i> Swimming pool</li>
+<li><i class="fas fa-check"></i> Private en-suite bathrooms</li>
+<li><i class="fas fa-check"></i> B&B included</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Canyon Hotel"
+data-images='["assets/hotels/canyon_hotel/1.jpeg","assets/hotels/canyon_hotel/2.jpeg","assets/hotels/canyon_hotel/3.jpeg","assets/hotels/canyon_hotel/4.jpeg","assets/hotels/canyon_hotel/5.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+<!-- Monica Hotel -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-300">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Monica Hotel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/hotels/monica_hotel/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Monica Hotel</h3>
+<a href="https://maps.app.goo.gl/mnYv7Z6CcnSCT9a87?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> Heart of the Tourist Promenade (El Mamsha)</li>
+<li><i class="fas fa-check"></i> Pool for adults & children</li>
+<li><i class="fas fa-check"></i> Complimentary beverages</li>
+<li><i class="fas fa-check"></i> Fully air-conditioned rooms</li>
+<li><i class="fas fa-check"></i> B&B included</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Monica Hotel"
+data-images='["assets/hotels/monica_hotel/1.jpeg","assets/hotels/monica_hotel/2.jpeg","assets/hotels/monica_hotel/3.jpeg","assets/hotels/monica_hotel/4.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+<!-- Dolphina Hotel -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-100">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Dolphina Hotel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/hotels/Dolphina_Hotel/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Dolphina Hotel</h3>
+<a href="https://maps.app.goo.gl/1VYXhzEFVcqbQvDz7?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> Luxurious hotel on the Tourist Promenade</li>
+<li><i class="fas fa-check"></i> A/C rooms with kitchenettes, LCD TVs & mini-bar</li>
+<li><i class="fas fa-check"></i> B&B included & complimentary Wi-Fi</li>
+<li><i class="fas fa-check"></i> Two bars with food & beverages</li>
+<li><i class="fas fa-check"></i> Pools for adults & children</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Dolphina Hotel"
+data-images='["assets/hotels/Dolphina_Hotel/1.jpeg","assets/hotels/Dolphina_Hotel/2.jpeg","assets/hotels/Dolphina_Hotel/3.jpeg","assets/hotels/Dolphina_Hotel/4.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+<!-- Desert Hotel -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-200">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Desert Hotel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/hotels/Desert_Hotel/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Desert Hotel</h3>
+<a href="https://maps.app.goo.gl/cGRYs5fdGMcYHaKq5?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> Fully renovated, Tourist Promenade</li>
+<li><i class="fas fa-check"></i> Prime location, easy access to amenities</li>
+<li><i class="fas fa-check"></i> A/C rooms with private bathrooms</li>
+<li><i class="fas fa-check"></i> Swimming pool</li>
+<li><i class="fas fa-check"></i> B&B included</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Desert Hotel"
+data-images='["assets/hotels/Desert_Hotel/1.jpeg","assets/hotels/Desert_Hotel/2.jpeg","assets/hotels/Desert_Hotel/3.jpeg","assets/hotels/Desert_Hotel/4.jpeg","assets/hotels/Desert_Hotel/5.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+<!-- Downtown Hotel -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-300">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Downtown Hotel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/hotels/downtown_hotel/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Downtown Hotel</h3>
+<a href="https://maps.app.goo.gl/J8Z5mwoBu9Suk21HA?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> First-row on the Tourist Promenade</li>
+<li><i class="fas fa-check"></i> Fully air-conditioned rooms</li>
+<li><i class="fas fa-check"></i> Private en-suite bathrooms</li>
+<li><i class="fas fa-check"></i> Mini-bar</li>
+<li><i class="fas fa-check"></i> B&B included</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Downtown Hotel"
+data-images='["assets/hotels/downtown_hotel/1.jpeg","assets/hotels/downtown_hotel/2.jpeg","assets/hotels/downtown_hotel/3.jpeg","assets/hotels/downtown_hotel/4.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+<!-- Lidia Hotel -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-100">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Lidia Hotel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/hotels/lidia_hotel/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Lidia Hotel</h3>
+<a href="https://maps.app.goo.gl/5nDLqrqerdfZKveU9?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> First-row sea view, private beach</li>
+<li><i class="fas fa-check"></i> A/C rooms with pool views, LCD TVs & mini-bars</li>
+<li><i class="fas fa-check"></i> Swimming pool</li>
+<li><i class="fas fa-check"></i> Beachfront restaurant & café, free Wi-Fi</li>
+<li><i class="fas fa-check"></i> B&B included</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Lidia Hotel"
+data-images='["assets/hotels/lidia_hotel/1.jpeg","assets/hotels/lidia_hotel/2.jpeg","assets/hotels/lidia_hotel/3.jpeg","assets/hotels/lidia_hotel/4.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- Our Camps -->
+<section class="py-32 px-8 bg-surface" id="camps">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-20 reveal">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-primary tracking-tight mb-6">The Authentic Edge</h2>
+<p class="font-body text-on-surface-variant text-lg font-light leading-relaxed">
+Disconnect to reconnect. Immerse yourself in the raw beauty of Sinai with our exclusive camping experiences. From starlit mountain valleys to the edge of the crystal waters, we redefine the wild escape.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+<!-- Home Hotel Camp -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-100">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Home Hotel Camp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/camps/home_hotel_camp/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Home Hotel Camp</h3>
+<a href="https://maps.app.goo.gl/gHfxYoAYfXqe9k6W9?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> Tourist Promenade (second row from sea)</li>
+<li><i class="fas fa-check"></i> Fully renovated spaces</li>
+<li><i class="fas fa-check"></i> A/C rooms with private bathrooms & mini-bars</li>
+<li><i class="fas fa-check"></i> Authentic Bedouin-style seating areas</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Home Hotel Camp"
+data-images='["assets/camps/home_hotel_camp/1.jpeg","assets/camps/home_hotel_camp/2.jpeg","assets/camps/home_hotel_camp/3.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+<!-- Alaska Camp -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-200">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Alaska Camp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/camps/alaska_camp/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Alaska Camp</h3>
+<a href="https://maps.app.goo.gl/5v7QEFynx8mhJppb8?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> Located on the Tourist Promenade</li>
+<li><i class="fas fa-check"></i> A/C rooms with private bathrooms & mini-bars</li>
+<li><i class="fas fa-check"></i> Authentic Bedouin-style seating areas</li>
+<li><i class="fas fa-check"></i> Complimentary Wi-Fi</li>
+<li><i class="fas fa-check"></i> B&B included</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Alaska Camp"
+data-images='["assets/camps/alaska_camp/1.jpeg","assets/camps/alaska_camp/2.jpeg","assets/camps/alaska_camp/3.jpeg","assets/camps/alaska_camp/4.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+<!-- Miramar Camp -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-300">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Miramar Camp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/camps/miramar_camp/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Miramar Camp</h3>
+<a href="https://maps.app.goo.gl/QZMcmxdis3yYBJ7h7?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> Located on the Tourist Promenade</li>
+<li><i class="fas fa-check"></i> A/C rooms with private bathrooms, LCD TVs & mini-bars</li>
+<li><i class="fas fa-check"></i> Authentic Bedouin-style seating areas</li>
+<li><i class="fas fa-check"></i> Complimentary Wi-Fi</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Miramar Camp"
+data-images='["assets/camps/miramar_camp/1.jpeg","assets/camps/miramar_camp/2.jpeg","assets/camps/miramar_camp/3.jpeg","assets/camps/miramar_camp/4.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+<!-- Tokyo House Camp -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-100">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Tokyo House Camp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/camps/tokyo_house_camp/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Tokyo House Camp</h3>
+<a href="https://maps.app.goo.gl/KwAyx8aDBftQPz6P7?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> Heart of the Tourist Promenade, 2 min from sea</li>
+<li><i class="fas fa-check"></i> A/C rooms with private en-suite bathrooms</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Tokyo House Camp"
+data-images='["assets/camps/tokyo_house_camp/1.jpeg","assets/camps/tokyo_house_camp/2.jpeg","assets/camps/tokyo_house_camp/3.jpeg","assets/camps/tokyo_house_camp/4.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+<!-- Seven Heaven Camp -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-200">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Seven Heaven Camp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/camps/seven_heaven_camp/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Seven Heaven Camp</h3>
+<a href="https://maps.app.goo.gl/sWGD4U1Mscux5ytL9?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> First-row on the Tourist Promenade</li>
+<li><i class="fas fa-check"></i> Fully renovated, A/C rooms with private bathrooms</li>
+<li><i class="fas fa-check"></i> Mini-bar equipped</li>
+<li><i class="fas fa-check"></i> On-site Professional Diving Center</li>
+<li><i class="fas fa-check"></i> Complimentary Wi-Fi</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Seven Heaven Camp"
+data-images='["assets/camps/seven_heaven_camp/1.jpeg","assets/camps/seven_heaven_camp/2.jpeg","assets/camps/seven_heaven_camp/3.jpeg","assets/camps/seven_heaven_camp/4.jpeg","assets/camps/seven_heaven_camp/5.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+<!-- Laperla Hotel Camp -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-300">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Laperla Hotel Camp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/camps/la_perla_camp/1.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Laperla Hotel Camp</h3>
+<a href="https://maps.app.goo.gl/S5QRLF3bdk1eaEgs7?g_st=ipc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-secondary text-sm font-medium mb-4 hover:text-primary transition-colors">
+<i class="fas fa-location-dot"></i> View on Map
+</a>
+<ul class="hotel-features space-y-1.5 mb-5">
+<li><i class="fas fa-check"></i> Heart of the Tourist Promenade (second row from sea)</li>
+<li><i class="fas fa-check"></i> Authentic Bedouin-style seating areas</li>
+<li><i class="fas fa-check"></i> A/C rooms with private bathrooms, LCD TVs & mini-bars</li>
+<li><i class="fas fa-check"></i> Complimentary Wi-Fi</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-low text-primary font-label font-semibold rounded-lg group-hover:bg-primary group-hover:text-on-primary transition-colors btn-view-more"
+data-hotel="Laperla Hotel Camp"
+data-images='["assets/camps/la_perla_camp/1.jpeg","assets/camps/la_perla_camp/2.jpeg","assets/camps/la_perla_camp/3.jpeg","assets/camps/la_perla_camp/4.jpeg"]'>
+View More <i class="fas fa-images ml-1"></i>
+</button>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- Signature Journeys -->
+<section class="py-32 px-8 bg-surface-container-low" id="journeys">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-20 reveal">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-primary tracking-tight mb-6">Signature Journeys</h2>
+<p class="font-body text-on-surface-variant text-lg font-light leading-relaxed">
+Embark on unforgettable adventures. From the profound tranquility of mountain valleys to the vibrant life of the Red Sea reefs, explore Dahab's finest destinations through our meticulously crafted excursions.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+<!-- El Laguna -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-100">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="El Laguna – Dahab" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/journey/lagona.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-3">El Laguna – Dahab</h3>
+<p class="font-body text-on-surface-variant text-sm font-light leading-relaxed">El Laguna is one of the most breathtaking and tranquil sanctuaries in Dahab, located just a short distance from the city center. It is renowned for its crystal-clear turquoise waters, soft golden sands, and stunning mountain backdrops that create a mesmerizing natural panorama.</p>
+</div>
+</div>
+
+<!-- Wadi Stars -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-200">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="Wadi Stars – Dahab" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/journey/wadi-star.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-3">Wadi Stars – Dahab</h3>
+<p class="font-body text-on-surface-variant text-sm font-light leading-relaxed">Wadi Stars is one of Dahab's most unique and serene hidden gems, nestled deep within the heart of the Sinai mountains. Surrounded by sweeping desert landscapes and dramatic rock formations, it offers an enchanting escape from the ordinary.</p>
+</div>
+</div>
+
+<!-- The Three Pools -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(3,31,65,0.04)] hover:shadow-[0_12px_40px_rgba(3,31,65,0.08)] transition-all duration-300 reveal delay-300">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img alt="The Three Pools – Dahab" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/journey/three-pools.jpeg"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold text-primary mb-3">The Three Pools – Dahab</h3>
+<p class="font-body text-on-surface-variant text-sm font-light leading-relaxed">The Three Pools is one of Dahab's premier natural diving and snorkeling destinations, situated along the scenic coastal road just a short drive from the center. It is celebrated for its crystal-clear waters, vibrant coral reefs, and three interconnected natural rock pools beautifully carved by the sea over time.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- Contact Us -->
+<section class="py-32 px-8 bg-surface-container-low relative" id="contact">
+<div class="max-w-4xl mx-auto glass-panel p-10 md:p-16 rounded-2xl shadow-[0_20px_60px_rgba(3,31,65,0.05)] border border-white/50 relative z-10 reveal">
+<div class="text-center mb-12">
+<h2 class="font-headline text-3xl md:text-4xl font-extrabold text-primary tracking-tight mb-4">Architect Your Journey</h2>
+<p class="font-body text-on-surface-variant font-light">Ready to redefine your next escape? Share your vision with us, and let our experts at Sky Way craft a bespoke Dahab itinerary that exceeds your every expectation.</p>
+</div>
+<form id="contact-form" class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<label class="block text-sm font-label text-primary font-medium mb-2">Full Name</label>
+<input name="name" class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary transition-all font-body shadow-sm" placeholder="Your full name" type="text" required/>
+</div>
+<div>
+<label class="block text-sm font-label text-primary font-medium mb-2">Phone Number</label>
+<input name="phone" class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary transition-all font-body shadow-sm" placeholder="Your WhatsApp or phone number" type="tel" required/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-label text-primary font-medium mb-2">Your Message</label>
+<textarea name="message" class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary transition-all font-body shadow-sm resize-none" placeholder="Describe your dream Dahab escape..." rows="4" required></textarea>
+</div>
+<div class="text-center">
+<button id="contact-submit-btn" class="px-10 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-lg font-label font-semibold shadow-lg hover:shadow-xl transition-all duration-300 w-full md:w-auto" type="submit">
+Send Message
+</button>
+</div>
+</form>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1/2 bg-surface-container-highest/20 -z-0 blur-3xl"></div>
+</section>
+</main>
+
+<!-- Hotel Lightbox -->
+<div id="hotel-lightbox" class="lightbox-overlay" style="display:none;">
+<div class="lightbox-backdrop"></div>
+<div class="lightbox-content">
+<div class="lightbox-header">
+<h3 id="lightbox-hotel-name" class="font-headline text-xl font-bold text-white"></h3>
+<button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+</div>
+<div class="lightbox-body">
+<button id="lightbox-prev" class="lightbox-arrow lightbox-prev" aria-label="Previous">
+<i class="fas fa-chevron-left"></i>
+</button>
+<div class="lightbox-img-wrapper">
+<img id="lightbox-img" src="" alt="" class="lightbox-img"/>
+</div>
+<button id="lightbox-next" class="lightbox-arrow lightbox-next" aria-label="Next">
+<i class="fas fa-chevron-right"></i>
+</button>
+</div>
+<div class="lightbox-counter">
+<span id="lightbox-current">1</span> / <span id="lightbox-total">1</span>
+</div>
+</div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
